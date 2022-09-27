@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">App-MindHealthy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="temas">
+        <item>Saúde Mental</item>
+        <item>Lives</item>
+        <item>Controle de ansiedade</item>
+        <item>Grupos de apoio</item>
+        <item>Consultas</item>
+    </string-array>
+
+</resources>
