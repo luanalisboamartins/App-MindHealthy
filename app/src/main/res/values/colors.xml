@@ -8,4 +8,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cinza_claro">#AAABAE</color>
+    <color name="verde_pistache">#93C572</color>
+    <color name="cor_teste">#5fffc4</color>
+    <color name="cor_teste_2">#90ffe1</color>
+    <color name="cor_teste_3">#b3ffe6</color>
+    <color name="cor_teste_4">#ACE4D5</color>
+    <color name="cor_teste_5">#B3EFDF</color>
+    <color name="cor_teste_6">#55F8CD</color>
+    <color name="cor_teste_7">#63EFCA</color>
+    <color name="cor_teste_8">#6CEFBA</color>
+    <color name="cor_teste_9">#60EFC6</color>
 </resources>
