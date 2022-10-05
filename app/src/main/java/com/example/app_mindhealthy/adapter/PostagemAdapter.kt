@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_mindhealthy.databinding.CardLayoutBinding
-import com.example.app_mindhealthy.model.PostagemModel
+import com.example.app_mindhealthy.model.Postagem
 
-class PostagemAdapter:RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
 
-    private var listPostagem = emptyList<PostagemModel>()
+class PostagemAdapter: RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
+
+    private var listPostagem = emptyList<Postagem>()
 
     class PostagemViewHolder(val binding: CardLayoutBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -24,7 +25,7 @@ class PostagemAdapter:RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>()
         holder.binding.textTituloPost.text = postagem.titulo
         holder.binding.textDescricao.text = postagem.descricao
         holder.binding.textLinkImagem.text = postagem.imagem
-        holder.binding.textTemas.text = postagem.tema
+        holder.binding.textTemas.text = postagem.temas.tema
 
     }
 
@@ -33,7 +34,7 @@ class PostagemAdapter:RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>()
 
     }
 
-    fun setList(list: List<PostagemModel>){
+    fun setList(list: List<Postagem>){
         listPostagem = list
         notifyDataSetChanged()
     }
