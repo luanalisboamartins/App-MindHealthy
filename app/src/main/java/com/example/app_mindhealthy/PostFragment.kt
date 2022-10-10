@@ -20,6 +20,7 @@ class PostFragment : Fragment() {
     private  lateinit var binding: FragmentPostBinding
     private val mainViewModel: MainViewModel by activityViewModels()
     private var temaSelecionado = 0L
+    private var postagemSelecionada: Postagem? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +29,10 @@ class PostFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentPostBinding.inflate(layoutInflater, container, false)
 
+        carregarDados()
+
         mainViewModel.listTemas()
+
 
         mainViewModel.myTemasResponse.observe(viewLifecycleOwner){
             response -> Log.d("Requisicao", response.body().toString())
@@ -71,6 +75,7 @@ class PostFragment : Fragment() {
 
     private fun validarCampos(titulo: String, postagem: String, linkImage: String):Boolean{
 
+
         return !(
                 (titulo == "" || titulo.length < 3 || titulo.length > 200) ||
                         (postagem == "" || postagem.length < 5 || postagem.length > 200) ||
@@ -85,14 +90,34 @@ class PostFragment : Fragment() {
         val tema = Temas(temaSelecionado, null, null)
 
         if (validarCampos(titulo, postagem, linkImage)) {
-            val postagem = Postagem(0, titulo, postagem, linkImage, tema)
-            mainViewModel.addPostagem(postagem)
-            Toast.makeText(context, "Postagem Criada!", Toast.LENGTH_SHORT).show()
+            val salvar: String
+            if (postagemSelecionada != null){
+                salvar = "Postagem Atualizada"
+                val post = Postagem( postagemSelecionada?.id!!, titulo, postagem, linkImage, tema)
+                mainViewModel.updatePostagem(post)
+            }else{
+                salvar = "Postagem Criada"
+                val post = Postagem(0, titulo, postagem, linkImage, tema)
+                mainViewModel.addPostagem(post)
+            }
+
+            Toast.makeText(context, salvar, Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_postFragment_to_listFragment)
         } else {
             Toast.makeText(context, "Verifique os Campos!", Toast.LENGTH_SHORT).show()
 
         }
+    }
+
+    private fun carregarDados(){
+      postagemSelecionada = mainViewModel.postagemSelecionada
+        if (postagemSelecionada != null){
+            binding.editTextTitulo.setText(postagemSelecionada?.titulo)
+            binding.editTextPost.setText(postagemSelecionada?.descricao)
+            binding.editTextLinkImage.setText(postagemSelecionada?.imagem)
+
+        }
+
     }
 
     }

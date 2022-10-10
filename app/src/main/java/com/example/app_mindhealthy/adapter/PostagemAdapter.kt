@@ -3,11 +3,17 @@ package com.example.app_mindhealthy.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.app_mindhealthy.MainViewModel
+import com.example.app_mindhealthy.PostFragment
 import com.example.app_mindhealthy.databinding.CardLayoutBinding
 import com.example.app_mindhealthy.model.Postagem
 
 
-class PostagemAdapter: RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
+class PostagemAdapter(
+    val taskClickListener: TaskClickListener,
+    val mainViewModel: MainViewModel
+
+): RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
 
     private var listPostagem = emptyList<Postagem>()
 
@@ -27,6 +33,14 @@ class PostagemAdapter: RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(
         holder.binding.textLinkImagem.text = postagem.imagem
         holder.binding.textTemas.text = postagem.temas.tema
 
+        holder.itemView.setOnClickListener {
+            taskClickListener.onTaskClickListener(postagem)
+        }
+
+
+        mainViewModel.updatePostagem(postagem)
+
+
     }
 
     override fun getItemCount(): Int {
@@ -35,7 +49,7 @@ class PostagemAdapter: RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(
     }
 
     fun setList(list: List<Postagem>){
-        listPostagem = list
+        listPostagem = list.sortedByDescending { it.id }
         notifyDataSetChanged()
     }
 
