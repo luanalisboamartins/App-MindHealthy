@@ -6,6 +6,7 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 
 interface ApiService {
 
@@ -19,4 +20,10 @@ interface ApiService {
 
     @GET("postagem")
     suspend fun  listPostagem(): Response<List<Postagem>>
+
+    @PUT("postagem")
+    suspend fun updatePostagem (
+        @Body postagem: Postagem
+
+    ): Response<Postagem>
 }
