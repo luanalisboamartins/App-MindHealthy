@@ -20,5 +20,9 @@ class Repository {
         return RetrofitInstance.api.updatePostagem(postagem)
        }
 
+       suspend fun deletePostagem(id: Long): Response<Postagem>{
+           return RetrofitInstance.api.deletePostagem(id)
+       }
+
 
     }

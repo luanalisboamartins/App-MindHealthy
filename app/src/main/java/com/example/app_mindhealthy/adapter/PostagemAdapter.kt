@@ -1,8 +1,11 @@
 package com.example.app_mindhealthy.adapter
 
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.app_mindhealthy.MainViewModel
 import com.example.app_mindhealthy.PostFragment
 import com.example.app_mindhealthy.databinding.CardLayoutBinding
@@ -11,7 +14,8 @@ import com.example.app_mindhealthy.model.Postagem
 
 class PostagemAdapter(
     val taskClickListener: TaskClickListener,
-    val mainViewModel: MainViewModel
+    val mainViewModel: MainViewModel,
+    val context: Context
 
 ): RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
 
@@ -30,8 +34,13 @@ class PostagemAdapter(
 
         holder.binding.textTituloPost.text = postagem.titulo
         holder.binding.textDescricao.text = postagem.descricao
-        holder.binding.textLinkImagem.text = postagem.imagem
         holder.binding.textTemas.text = postagem.temas.tema
+
+        Glide
+            .with(context)
+            .load(postagem.imagem)
+            .placeholder(android.R.drawable.ic_menu_report_image)
+            .into(holder.binding.imageView)
 
         holder.itemView.setOnClickListener {
             taskClickListener.onTaskClickListener(postagem)
@@ -39,6 +48,10 @@ class PostagemAdapter(
 
 
         mainViewModel.updatePostagem(postagem)
+
+        holder.binding.buttonDeletar.setOnClickListener{
+            showAlertDialog(postagem.id)
+        }
 
 
     }
@@ -51,6 +64,19 @@ class PostagemAdapter(
     fun setList(list: List<Postagem>){
         listPostagem = list.sortedByDescending { it.id }
         notifyDataSetChanged()
+    }
+
+    private fun showAlertDialog(id: Long){
+        AlertDialog.Builder(context)
+            .setTitle("Excluir Postagem")
+            .setMessage("Deseja Excluir Postagem?")
+            .setPositiveButton("Sim"){
+                    _,_ -> mainViewModel.deletePostagem(id)
+            }
+
+            .setNegativeButton("Não"){
+                    _,_ ->
+            }.show()
     }
 
 }
