@@ -3,10 +3,7 @@ package com.example.app_mindhealthy.api
 import com.example.app_mindhealthy.model.Postagem
 import com.example.app_mindhealthy.model.Temas
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -25,5 +22,10 @@ interface ApiService {
     suspend fun updatePostagem (
         @Body postagem: Postagem
 
+    ): Response<Postagem>
+
+    @DELETE("postagem/{id}")
+    suspend fun deletePostagem(
+        @Path("id") id: Long
     ): Response<Postagem>
 }
