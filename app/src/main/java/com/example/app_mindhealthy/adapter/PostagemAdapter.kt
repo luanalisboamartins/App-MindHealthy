@@ -1,5 +1,7 @@
 package com.example.app_mindhealthy.adapter
 
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +13,8 @@ import com.example.app_mindhealthy.model.Postagem
 
 class PostagemAdapter(
     val taskClickListener: TaskClickListener,
-    val mainViewModel: MainViewModel
+    val mainViewModel: MainViewModel,
+    val context: Context
 
 ): RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
 
@@ -40,6 +43,10 @@ class PostagemAdapter(
 
         mainViewModel.updatePostagem(postagem)
 
+        holder.binding.buttonDeletar.setOnClickListener{
+            showAlertDialog(postagem.id)
+        }
+
 
     }
 
@@ -51,6 +58,19 @@ class PostagemAdapter(
     fun setList(list: List<Postagem>){
         listPostagem = list.sortedByDescending { it.id }
         notifyDataSetChanged()
+    }
+
+    private fun showAlertDialog(id: Long){
+        AlertDialog.Builder(context)
+            .setTitle("Excluir Postagem")
+            .setMessage("Deseja Excluir Postagem?")
+            .setPositiveButton("Sim"){
+                    _,_ -> mainViewModel.deletePostagem(id)
+            }
+
+            .setNegativeButton("Não"){
+                    _,_ ->
+            }.show()
     }
 
 }
