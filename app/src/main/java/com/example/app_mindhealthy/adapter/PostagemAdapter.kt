@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.app_mindhealthy.MainViewModel
 import com.example.app_mindhealthy.PostFragment
 import com.example.app_mindhealthy.databinding.CardLayoutBinding
@@ -33,8 +34,13 @@ class PostagemAdapter(
 
         holder.binding.textTituloPost.text = postagem.titulo
         holder.binding.textDescricao.text = postagem.descricao
-        holder.binding.textLinkImagem.text = postagem.imagem
         holder.binding.textTemas.text = postagem.temas.tema
+
+        Glide
+            .with(context)
+            .load(postagem.imagem)
+            .placeholder(android.R.drawable.ic_menu_report_image)
+            .into(holder.binding.imageView)
 
         holder.itemView.setOnClickListener {
             taskClickListener.onTaskClickListener(postagem)

@@ -79,7 +79,7 @@ class PostFragment : Fragment() {
         return !(
                 (titulo == "" || titulo.length < 3 || titulo.length > 200) ||
                         (postagem == "" || postagem.length < 5 || postagem.length > 200) ||
-                        (linkImage == "" || linkImage.length < 3 || linkImage.length > 20)
+                        (linkImage == "" || linkImage.length < 3 || linkImage.length > 1000)
                 )
     }
 
