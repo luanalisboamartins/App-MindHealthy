@@ -32,14 +32,12 @@
             android:textColor="#000000"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/textLinkImagem"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Link da Imagem"
-            android:textColor="#000000"
-            android:textSize="24sp" />
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_report_image" />
 
         <TextView
             android:id="@+id/textTemas"
@@ -49,6 +47,12 @@
             android:text="Temas"
             android:textColor="#000000"
             android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonDeletar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deletar Postagem" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

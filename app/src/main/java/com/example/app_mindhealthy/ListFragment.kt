@@ -9,9 +9,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.app_mindhealthy.adapter.PostagemAdapter
+import com.example.app_mindhealthy.adapter.TaskClickListener
 import com.example.app_mindhealthy.databinding.FragmentListBinding
+import com.example.app_mindhealthy.model.Postagem
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), TaskClickListener {
 
     private lateinit var binding: FragmentListBinding
     private val mainViewModel: MainViewModel by activityViewModels()
@@ -26,21 +28,27 @@ class ListFragment : Fragment() {
 
         mainViewModel.listPostagem()
 
-        val adapter = PostagemAdapter()
+        val adapter = PostagemAdapter(this, mainViewModel, requireContext())
         binding.recyclerPostagem.layoutManager = LinearLayoutManager(context)
         binding.recyclerPostagem.adapter = adapter
         binding.recyclerPostagem.setHasFixedSize(true)
 
         binding.floatingAdd.setOnClickListener {
+            mainViewModel.postagemSelecionada = null
             findNavController().navigate(R.id.action_listFragment_to_postFragment)
         }
 
-        mainViewModel.mypostagemResponse.observe(viewLifecycleOwner){
-            response -> if (response.body() != null){
+        mainViewModel.mypostagemResponse.observe(viewLifecycleOwner) { response ->
+            if (response.body() != null) {
                 adapter.setList(response.body()!!)
             }
         }
         return binding.root
     }
 
+    override fun onTaskClickListener(postagem: Postagem) {
+        mainViewModel.postagemSelecionada = postagem
+        findNavController().navigate(R.id.action_listFragment_to_postFragment)
+
+    }
 }
