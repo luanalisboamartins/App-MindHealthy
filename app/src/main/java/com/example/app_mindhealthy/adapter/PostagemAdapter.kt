@@ -42,7 +42,7 @@ class PostagemAdapter(
             .placeholder(android.R.drawable.ic_menu_report_image)
             .into(holder.binding.imageView)
 
-        holder.itemView.setOnClickListener {
+        holder.binding.buttonEditar.setOnClickListener {
             taskClickListener.onTaskClickListener(postagem)
         }
 

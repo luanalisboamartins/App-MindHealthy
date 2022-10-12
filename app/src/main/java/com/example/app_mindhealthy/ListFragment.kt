@@ -33,10 +33,6 @@ class ListFragment : Fragment(), TaskClickListener {
         binding.recyclerPostagem.adapter = adapter
         binding.recyclerPostagem.setHasFixedSize(true)
 
-        binding.floatingAdd.setOnClickListener {
-            mainViewModel.postagemSelecionada = null
-            findNavController().navigate(R.id.action_listFragment_to_postFragment)
-        }
 
         mainViewModel.mypostagemResponse.observe(viewLifecycleOwner) { response ->
             if (response.body() != null) {
