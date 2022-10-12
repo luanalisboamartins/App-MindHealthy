@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinza_claro"
+    android:background="@drawable/img"
     tools:context=".PostFragment">
 
     <TextView
@@ -12,8 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:text="Inserir imagem"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="normal|bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPost"
         tools:ignore="TextContrastCheck" />
@@ -25,6 +28,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Escolha uma categoria"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal|bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
@@ -37,6 +43,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Publicar"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:cornerRadius="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,15 +55,17 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:background="@color/white"
         android:ems="20"
         android:gravity="start|top"
-        android:hint="Digite sua Postagem"
+        android:hint=" Digite sua Postagem"
         android:inputType="textMultiLine"
         android:lines="20"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTitulo"
         tools:ignore="TextContrastCheck" />
@@ -69,7 +79,8 @@
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAddImage2" />
+        app:layout_constraintTop_toBottomOf="@+id/textAddImage2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editTextTitulo"
@@ -80,9 +91,10 @@
         android:layout_marginEnd="16dp"
         android:background="@color/white"
         android:ems="10"
-        android:hint="Título"
+        android:hint=" Título"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTemas" />
@@ -95,11 +107,25 @@
         android:layout_marginEnd="16dp"
         android:background="@color/white"
         android:ems="10"
-        android:hint="Link da imagem"
+        android:hint=" Link da imagem"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddImage" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="3dp"
+        android:alpha=".4"
+        android:src="@drawable/img_1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPublicar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
