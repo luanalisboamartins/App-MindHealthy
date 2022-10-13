@@ -8,13 +8,6 @@
 A solução acreditamos que uma grande parte da população possa encontrar a facilidade de conexão com psicólogos e a acessibilidade nos valores das consultas,
 no app você será capaz de ver as postagens de outros usuários, além de fazer as suas próprias postagens e poderá selecionar uma hashtag de um tema podendo editar e excluir-las também.</p>
 
-## Desenvolvimento:
-
-- [x] <b>01</b> Definindo escopo
-- [x] <b>02</b> Protótipo do projeto
-- [x] <b>03</b> 
-- [x] <b>04</b> Definindo escopo
-
 ## Ferramentas usadas:
 
 ### Back-End
