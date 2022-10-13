@@ -11,13 +11,13 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 ## Desenvolvimento:
 
 - [x] <b>01</b> Definindo escopo
-- [x] <b>02</b> Definindo escopo
-- [x] <b>03</b> Definindo escopo
+- [x] <b>02</b> Protótipo do projeto
+- [x] <b>03</b> 
 - [x] <b>04</b> Definindo escopo
 
-<h1> Ferramentas usadas: </h1>
+## Ferramentas usadas:
 
-<h2> Back-End </h2>
+### Back-End
 
 - MySQL
 - Postgree
@@ -31,3 +31,43 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 - Kotlin
 - Android (RetroFit, Hilt, Corrotinas, Glide, )
 
+<div align="center" valign="top"><br>
+  <p align="center">Stack de desenvolvimento! </p>
+  <img align="center" alt="Mind-Kt" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" />
+  <img align="center" alt="Mind-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">         <img align="center" alt="Mind-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Mind-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">  
+  <img align="center" alt="Mind-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />  
+  <img align="center" alt="Mind-SQL" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+  <img align="center" alt="nestjs" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg">
+  <img align="center" alt="nodejs" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
+</div><br>
+
+# Autores:
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/Vitoria-Agnes"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/110489545?v=4" width="100px;" alt="Vitória Agnes"/><br /><sub><b>Vitória Agnes</b></sub></a><br/></td>
+<td align="center"><a href="https://github.com/SrMatias"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/110489457?v=4" width="100px;" alt="Murilo Matias"/><br /><sub><b>Murilo Matias</b></sub></a><br/></td> 
+<td align="center"><a href="https://github.com/julianoBeerg"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/97549707?v=4" width="100px;" alt="Juliano Nunes"/><br /><sub><b>Juliano Nunes</b></sub></a><br/></td> 
+<td align="center"><a href="https://github.com/luanalisboamartins"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/110469407?v=4" width="100px;" alt="Luana Lisboa"/><br /><sub><b>Luana Lisboa</b></sub></a><br/></td> 
+<td align="center"><a href="https://github.com/KelvinAndrade"><img style="border-radius: 50%;" src="https://images-ext-1.discordapp.net/external/MnRA59NFrY2ld9wvOaLw57DJM4uPuhKOuxaWDm48HZA/%3Fv%3D4/https/avatars.githubusercontent.com/u/108539194" width="100px;" alt="Kelvin Andrade"/><br /><sub><b>Kelvin Andrade</b></sub></a><br/></td>
+ <td align="center"><a href="https://github.com/Carlos-Bastos"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86082497?v=4" width="100px;" alt="Carlos Bastos"/><br /><sub><b>Carlos Bastos</b></sub></a><br/></td>
+</table>
+
+## Vitória Agnes
+- Linked In: https://www.linkedin.com/in/vitoria-agnes-0b4795244/
+
+## Murilo Matias
+- Linked In: https://www.linkedin.com/in/murilo-matias-ba806b29/
+
+## Luana Lisboa
+- Linked In: https://www.linkedin.com/in/luana-lisboa-martins/
+
+## Juliano Nunes
+- Linked In: https://www.linkedin.com/in/juliano-silva-nunes/
+
+## Kelvin Andrade
+- Linked In: https://www.linkedin.com/in/kelvin-andrade-santos/
+
+## Carlos Bastos
+- Linked In: https://www.linkedin.com/in/carlos-bastos-299b09b2/
