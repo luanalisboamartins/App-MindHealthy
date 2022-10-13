@@ -9,5 +9,5 @@
         android:icon="@drawable/ic_baseline_post_add_24"/>
     <item android:title="Configurar"
         android:id="@+id/configurar"
-        android:icon="@drawable/ic_baseline_settings_24"/>
+        android:icon="@drawable/ic_baseline_person_pin_24"/>
 </menu>
