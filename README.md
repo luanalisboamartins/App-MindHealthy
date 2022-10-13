@@ -15,7 +15,19 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 - [x] <b>03</b> Definindo escopo
 - [x] <b>04</b> Definindo escopo
 
-## Ferramentas usadas:
+<h1> Ferramentas usadas: </h1>
 
-- Next.JS <img align="center" alt="Mind-NJS" height="30" width="40" src="<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-" />
+<h2> Back-End </h2>
+
+- MySQL
+- Postgree
+- JavaScritp
+- NodeJS
+- NestJS
+- CSS
+
+## Front-End
+
+- Kotlin
+- Android (RetroFit, Hilt, Corrotinas, Glide, )
+
