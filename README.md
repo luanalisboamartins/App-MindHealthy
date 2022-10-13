@@ -22,7 +22,7 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 ## Front-End
 
 - Kotlin
-- Android (RetroFit, Hilt, Corrotinas, Glide, )
+- Android (RetroFit, Hilt, Corrotinas, Glide)
 
 <div align="center" valign="top"><br>
   <p align="center">Stack de desenvolvimento! </p>
