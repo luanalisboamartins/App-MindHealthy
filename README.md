@@ -5,7 +5,7 @@
 ## Descrição e Objetivo do projeto:
 <p>Nosso objetivo é conectar pessoas que buscam por uma melhora em sua saúde mental, com a ajuda de profissionais que possam trazer um valor acessivel em suas consultas, e também com outras pessoas que já passaram por algo parecido e que podem compartilhar experiências através de dicas ou grupos de apoio.
 
-A solução acreditamos que uma grande parte da população possa encontrar a facilidade de conexão com psicólogos e a acessibilidade nos valores das consultas,
+Acreditamos que uma grande parte da população possa encontrar a facilidade de conexão com psicólogos e a acessibilidade nos valores das consultas,
 no app você será capaz de ver as postagens de outros usuários, além de fazer as suas próprias postagens e poderá selecionar uma hashtag de um tema podendo editar e excluir-las também.</p>
 
 ## Ferramentas usadas:
