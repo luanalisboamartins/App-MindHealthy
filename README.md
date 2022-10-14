@@ -13,7 +13,6 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 ### Back-End
 
 - MySQL
-- Postgree
 - JavaScript
 - NodeJS
 - NestJS
