@@ -14,10 +14,9 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 
 - MySQL
 - Postgree
-- JavaScritp
+- JavaScript
 - NodeJS
 - NestJS
-- CSS
 
 ## Front-End
 
