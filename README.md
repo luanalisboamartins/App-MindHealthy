@@ -16,6 +16,7 @@ no app você será capaz de ver as postagens de outros usuários, além de fazer
 - JavaScript
 - NodeJS
 - NestJS
+- TypeScript
 
 ## Front-End
 
