@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.app_mindhealthy.model.Postagem
 import com.example.app_mindhealthy.model.Temas
 import com.example.app_mindhealthy.api.Repository
+import com.example.app_mindhealthy.model.Usuario
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -51,7 +52,6 @@ class MainViewModel @Inject constructor(
     fun addPostagem(postagem: Postagem) {
         viewModelScope.launch {
             try {
-
                 repository.addPostagem(postagem)
             } catch (e: Exception) {
                 Log.d("Erro", e.message.toString())
@@ -90,6 +90,15 @@ class MainViewModel @Inject constructor(
                 listPostagem()
 
             }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+    fun cadUsuario(usuario: Usuario){
+        viewModelScope.launch {
+            try {
+                repository.cadUsuario(usuario)
+            } catch (e: Exception) {
                 Log.d("Erro", e.message.toString())
             }
         }
