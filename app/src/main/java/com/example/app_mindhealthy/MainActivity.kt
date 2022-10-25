@@ -34,18 +34,6 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.findNavController()
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-
-            when (it.itemId) {
-
-                R.id.home -> replaceFragment(HomeFragment())
-                R.id.postar -> replaceFragment(PostFragment())
-                R.id.configurar -> replaceFragment(ConfigFragment())
-
-                else -> {}
-            }
-            true
-        }
 
         bottomNavigationView.setupWithNavController(navController)
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
@@ -59,6 +47,18 @@ class MainActivity : AppCompatActivity() {
             } else {
                 View.VISIBLE
             }
+        }
+        binding.bottomNavigationView.setOnItemSelectedListener {
+
+            when (it.itemId) {
+
+                R.id.home -> replaceFragment(HomeFragment())
+                R.id.postar -> replaceFragment(PostFragment())
+                R.id.configurar -> replaceFragment(ConfigFragment())
+
+                else -> {}
+            }
+            true
         }
     }
 
